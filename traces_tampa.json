@@ -1,0 +1,5404 @@
+{
+ "day": 197,
+ "date": "2025-07-17",
+ "traces": [
+  {
+   "time": "Thu 17 Jul 00:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 15,
+     "dr_today": true,
+     "h_to_dr": 15,
+     "t_out": 26.5,
+     "t_out_max_6h": 27.2,
+     "t_out_max_24h": 32.9,
+     "t_out_min_12h": 24.5,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 0,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 00:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 8,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.3,
+      "occupied": false,
+      "h_to_occ": 7,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.3,
+      "occupied": false,
+      "h_to_occ": 8,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 26.9,
+      "occupied": false,
+      "h_to_occ": 8,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.8,
+      "occupied": false,
+      "h_to_occ": 8,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 01:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 14,
+     "dr_today": true,
+     "h_to_dr": 14,
+     "t_out": 27.2,
+     "t_out_max_6h": 27.2,
+     "t_out_max_24h": 32.9,
+     "t_out_min_12h": 24.7,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 1,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 01:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 7,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.4,
+      "occupied": false,
+      "h_to_occ": 6,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.4,
+      "occupied": false,
+      "h_to_occ": 7,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 26.9,
+      "occupied": false,
+      "h_to_occ": 7,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.9,
+      "occupied": false,
+      "h_to_occ": 7,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 02:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 13,
+     "dr_today": true,
+     "h_to_dr": 13,
+     "t_out": 27.2,
+     "t_out_max_6h": 27.2,
+     "t_out_max_24h": 32.9,
+     "t_out_min_12h": 24.9,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 2,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 02:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 6,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 5,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 6,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.0,
+      "occupied": false,
+      "h_to_occ": 6,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 6,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 03:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 12,
+     "dr_today": true,
+     "h_to_dr": 12,
+     "t_out": 26.9,
+     "t_out_max_6h": 28.6,
+     "t_out_max_24h": 33.0,
+     "t_out_min_12h": 25.1,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 3,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 03:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.7,
+      "occupied": false,
+      "h_to_occ": 5,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 4,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 5,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.0,
+      "occupied": false,
+      "h_to_occ": 5,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 5,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 04:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "Zones are unoccupied but bookings expect people to arrive soon, morning recovery in cooling season with warm weather.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "SOO04",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "SOO03",
+    "TAR01",
+    "PB03"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 11,
+     "dr_today": true,
+     "h_to_dr": 11,
+     "t_out": 26.4,
+     "t_out_max_6h": 30.2,
+     "t_out_max_24h": 33.1,
+     "t_out_min_12h": 25.4,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 4,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 04:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.7,
+      "occupied": false,
+      "h_to_occ": 4,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 3,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 4,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.0,
+      "occupied": false,
+      "h_to_occ": 4,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 26.1,
+      "occupied": false,
+      "h_to_occ": 4,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 05:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "Zones are unoccupied but bookings expect people to arrive soon, morning recovery in cooling season with warm weather.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "SOO04",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "SOO03",
+    "TAR01",
+    "PB03"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02",
+    "SOO04"
+   ],
+   "strategy": "setback+optimal_start+core_ceiling",
+   "rationale": "north: setback; east: optimal_start; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "SOO04",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 10,
+     "dr_today": true,
+     "h_to_dr": 10,
+     "t_out": 25.8,
+     "t_out_max_6h": 31.2,
+     "t_out_max_24h": 33.3,
+     "t_out_min_12h": 25.6,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 5,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 05:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.7,
+      "occupied": false,
+      "h_to_occ": 3,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 2,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 3,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 26.9,
+      "occupied": false,
+      "h_to_occ": 3,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 26.1,
+      "occupied": false,
+      "h_to_occ": 3,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 06:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied but bookings expect people to arrive soon, morning recovery in cooling season with warm weather.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO04",
+    "CP04",
+    "SOO11",
+    "SOO03",
+    "SOO02",
+    "PB03",
+    "CP02",
+    "SOO12"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO04"
+   ],
+   "strategy": "optimal_start",
+   "rationale": "north: optimal_start; east: optimal_start; south: optimal_start; west: optimal_start; core: optimal_start",
+   "citations": [
+    "SOO04",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 9,
+     "dr_today": true,
+     "h_to_dr": 9,
+     "t_out": 26.5,
+     "t_out_max_6h": 32.0,
+     "t_out_max_24h": 33.4,
+     "t_out_min_12h": 27.2,
+     "econ_ok": false,
+     "demand_ratio": 0.1,
+     "hour": 6,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 06:00",
+     "demand_kw": 2.9,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.7,
+      "occupied": false,
+      "h_to_occ": 2,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 1,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "south": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 2,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 26.9,
+      "occupied": false,
+      "h_to_occ": 2,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 26.1,
+      "occupied": false,
+      "h_to_occ": 2,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 07:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied but bookings expect people to arrive soon, morning recovery in cooling season with warm weather.",
+    "A zone is booked for use now but is vacant with nobody present.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO04",
+    "SOO08",
+    "CP04",
+    "SOO11",
+    "SOO03",
+    "SOO01",
+    "SOO02",
+    "TAR03"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO04",
+    "SOO08"
+   ],
+   "strategy": "optimal_start+standby",
+   "rationale": "north: optimal_start; east: standby; south: optimal_start; west: optimal_start; core: optimal_start",
+   "citations": [
+    "SOO04",
+    "SOO08",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 18.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 8,
+     "dr_today": true,
+     "h_to_dr": 8,
+     "t_out": 27.8,
+     "t_out_max_6h": 32.5,
+     "t_out_max_24h": 33.5,
+     "t_out_min_12h": 28.3,
+     "econ_ok": false,
+     "demand_ratio": 0.4,
+     "hour": 7,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 07:00",
+     "demand_kw": 12.2,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 1,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "east": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 0,
+      "h_to_vacant": 11,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "south": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 1,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "west": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 1,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "core": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 1,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 08:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "A zone is booked for use now but is vacant with nobody present."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO08",
+    "CP01",
+    "SOO03",
+    "TAR03",
+    "PB05",
+    "SOO04",
+    "PB04"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO08"
+   ],
+   "strategy": "standby+occupied",
+   "rationale": "north: standby; east: standby; south: standby; west: standby; core: occupied",
+   "citations": [
+    "SOO08",
+    "SOO01"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 7,
+     "dr_today": true,
+     "h_to_dr": 7,
+     "t_out": 28.9,
+     "t_out_max_6h": 33.1,
+     "t_out_max_24h": 33.6,
+     "t_out_min_12h": 27.8,
+     "econ_ok": false,
+     "demand_ratio": 0.3,
+     "hour": 8,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 08:00",
+     "demand_kw": 11.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 0,
+      "h_to_vacant": 11,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "east": {
+      "t_zone": 25.5,
+      "occupied": false,
+      "h_to_occ": 0,
+      "h_to_vacant": 10,
+      "noshow_h": 1,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 25.5
+     },
+     "south": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 0,
+      "h_to_vacant": 10,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "west": {
+      "t_zone": 24.0,
+      "occupied": false,
+      "h_to_occ": 0,
+      "h_to_vacant": 9,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     },
+     "core": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 10,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 18.0,
+      "prev_cool": 24.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 09:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather."
+   ],
+   "retrieved": [
+    "SOO01",
+    "CP01",
+    "SOO03",
+    "SOO04",
+    "PB04",
+    "SOO05",
+    "SOO06",
+    "CP03"
+   ],
+   "applicable": [
+    "SOO01"
+   ],
+   "strategy": "occupied",
+   "rationale": "north: occupied; east: occupied; south: occupied; west: occupied; core: occupied",
+   "citations": [
+    "SOO01"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 6,
+     "dr_today": true,
+     "h_to_dr": 6,
+     "t_out": 30.3,
+     "t_out_max_6h": 33.8,
+     "t_out_max_24h": 33.8,
+     "t_out_min_12h": 27.3,
+     "econ_ok": false,
+     "demand_ratio": 0.5,
+     "hour": 9,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 09:00",
+     "demand_kw": 18.9,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 10,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 25.5
+     },
+     "east": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 9,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 25.5
+     },
+     "south": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 9,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 25.5
+     },
+     "west": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 8,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 25.5
+     },
+     "core": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 9,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 10:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather."
+   ],
+   "retrieved": [
+    "SOO01",
+    "CP01",
+    "SOO03",
+    "SOO04",
+    "PB04",
+    "SOO05",
+    "SOO06",
+    "CP03"
+   ],
+   "applicable": [
+    "SOO01"
+   ],
+   "strategy": "occupied",
+   "rationale": "north: occupied; east: occupied; south: occupied; west: occupied; core: occupied",
+   "citations": [
+    "SOO01"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 5,
+     "dr_today": true,
+     "h_to_dr": 5,
+     "t_out": 31.7,
+     "t_out_max_6h": 33.9,
+     "t_out_max_24h": 33.9,
+     "t_out_min_12h": 26.8,
+     "econ_ok": false,
+     "demand_ratio": 0.8,
+     "hour": 10,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 10:00",
+     "demand_kw": 26.7,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 9,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "east": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 8,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "south": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 8,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "west": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 7,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "core": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 8,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 11:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "A hot afternoon is forecast with sun on the west facade."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO10",
+    "CP01",
+    "CP06",
+    "SOO03",
+    "PB02",
+    "SOO04",
+    "PB01"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO10"
+   ],
+   "strategy": "occupied+west_solar",
+   "rationale": "north: occupied; east: occupied; south: occupied; west: west_solar; core: occupied",
+   "citations": [
+    "SOO01",
+    "SOO10"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 21.0,
+     "cool": 23.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 21.0,
+     "cool": 23.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 24.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "mid",
+     "h_to_peak": 4,
+     "dr_today": true,
+     "h_to_dr": 4,
+     "t_out": 32.5,
+     "t_out_max_6h": 34.0,
+     "t_out_max_24h": 34.0,
+     "t_out_min_12h": 25.9,
+     "econ_ok": false,
+     "demand_ratio": 0.8,
+     "hour": 11,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 11:00",
+     "demand_kw": 26.0,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 8,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "east": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 7,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "south": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 7,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "west": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 6,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "core": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 7,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 12:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "A critical peak event has been announced for today and starts within three hours.",
+    "A hot afternoon is forecast with sun on the west facade."
+   ],
+   "retrieved": [
+    "SOO01",
+    "TAR04",
+    "SOO10",
+    "TAR03",
+    "CP01",
+    "CP06",
+    "SOO03",
+    "PB02"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO10",
+    "TAR04"
+   ],
+   "strategy": "event_precool",
+   "rationale": "north: event_precool; east: event_precool; south: event_precool; west: event_precool; core: event_precool",
+   "citations": [
+    "SOO01",
+    "TAR04",
+    "SOO10"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "mid",
+     "h_to_peak": 3,
+     "dr_today": true,
+     "h_to_dr": 3,
+     "t_out": 33.1,
+     "t_out_max_6h": 34.1,
+     "t_out_max_24h": 34.1,
+     "t_out_min_12h": 26.0,
+     "econ_ok": false,
+     "demand_ratio": 0.8,
+     "hour": 12,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 12:00",
+     "demand_kw": 26.7,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 7,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "east": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 6,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "south": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 6,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     },
+     "west": {
+      "t_zone": 23.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 5,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 23.5
+     },
+     "core": {
+      "t_zone": 24.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 6,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 21.0,
+      "prev_cool": 24.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 13:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "The peak tariff window starts within two hours in cooling season.",
+    "A critical peak event has been announced for today and starts within three hours.",
+    "A hot afternoon is forecast with sun on the west facade.",
+    "Building demand is close to the highest demand recorded this month."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO05",
+    "TAR04",
+    "SOO10",
+    "SOO09",
+    "SOO14",
+    "TAR03",
+    "CP01"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO05",
+    "SOO09",
+    "SOO10",
+    "TAR04"
+   ],
+   "strategy": "demand_limit",
+   "rationale": "north: demand_limit; east: demand_limit; south: demand_limit; west: demand_limit; core: demand_limit",
+   "citations": [
+    "SOO01",
+    "SOO05",
+    "TAR04",
+    "SOO09",
+    "SOO10"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.0,
+     "cool": 23.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "mid",
+     "h_to_peak": 2,
+     "dr_today": true,
+     "h_to_dr": 2,
+     "t_out": 33.6,
+     "t_out_max_6h": 34.3,
+     "t_out_max_24h": 34.3,
+     "t_out_min_12h": 25.3,
+     "econ_ok": false,
+     "demand_ratio": 1.0,
+     "hour": 13,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 13:00",
+     "demand_kw": 33.1,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 6,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "east": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 5,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "south": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 5,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "west": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 4,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "core": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 5,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 14:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "The peak tariff window starts within two hours in cooling season.",
+    "A critical peak event has been announced for today and starts within three hours."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO05",
+    "TAR04",
+    "SOO14",
+    "TAR03",
+    "CP01",
+    "SOO06",
+    "SOO03"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO05",
+    "TAR04"
+   ],
+   "strategy": "event_precool",
+   "rationale": "north: event_precool; east: event_precool; south: event_precool; west: event_precool; core: event_precool",
+   "citations": [
+    "SOO01",
+    "SOO05",
+    "TAR04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.0,
+     "cool": 22.5,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "mid",
+     "h_to_peak": 1,
+     "dr_today": true,
+     "h_to_dr": 1,
+     "t_out": 34.2,
+     "t_out_max_6h": 34.4,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 25.2,
+     "econ_ok": false,
+     "demand_ratio": 0.8,
+     "hour": 14,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 14:00",
+     "demand_kw": 29.1,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 23.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 5,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 23.0
+     },
+     "east": {
+      "t_zone": 23.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 4,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 23.0
+     },
+     "south": {
+      "t_zone": 23.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 4,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 23.0
+     },
+     "west": {
+      "t_zone": 23.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 3,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 23.0
+     },
+     "core": {
+      "t_zone": 23.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 4,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 20.0,
+      "prev_cool": 23.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 15:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "A critical peak event is active now.",
+    "Building demand is close to the highest demand recorded this month."
+   ],
+   "retrieved": [
+    "SOO01",
+    "TAR03",
+    "SOO09",
+    "CP01",
+    "TAR04",
+    "TAR02",
+    "SOO11",
+    "SOO03"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO09",
+    "TAR03"
+   ],
+   "strategy": "demand_limit",
+   "rationale": "north: demand_limit; east: demand_limit; south: demand_limit; west: demand_limit; core: demand_limit",
+   "citations": [
+    "SOO01",
+    "TAR03",
+    "SOO09"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 20.5,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.5,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.5,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.5,
+     "cool": 25.5,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.5,
+     "cool": 25.5,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [
+     {
+      "zone": "north",
+      "constraint": "C_RATE",
+      "source": "CP03",
+      "field": "cool",
+      "proposed": 26.0,
+      "repaired": 25.5,
+      "reason": "Occupants notice and complain about abrupt setpoint swings"
+     },
+     {
+      "zone": "east",
+      "constraint": "C_RATE",
+      "source": "CP03",
+      "field": "cool",
+      "proposed": 26.0,
+      "repaired": 25.5,
+      "reason": "Occupants notice and complain about abrupt setpoint swings"
+     },
+     {
+      "zone": "south",
+      "constraint": "C_RATE",
+      "source": "CP03",
+      "field": "cool",
+      "proposed": 26.0,
+      "repaired": 25.5,
+      "reason": "Occupants notice and complain about abrupt setpoint swings"
+     },
+     {
+      "zone": "west",
+      "constraint": "C_RATE",
+      "source": "CP03",
+      "field": "cool",
+      "proposed": 26.0,
+      "repaired": 25.5,
+      "reason": "Occupants notice and complain about abrupt setpoint swings"
+     },
+     {
+      "zone": "core",
+      "constraint": "C_RATE",
+      "source": "CP03",
+      "field": "cool",
+      "proposed": 26.0,
+      "repaired": 25.5,
+      "reason": "Occupants notice and complain about abrupt setpoint swings"
+     }
+    ],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "critical",
+     "h_to_peak": 0,
+     "dr_today": true,
+     "h_to_dr": 0,
+     "t_out": 33.5,
+     "t_out_max_6h": 32.8,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.9,
+     "econ_ok": false,
+     "demand_ratio": 1.0,
+     "hour": 15,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 15:00",
+     "demand_kw": 34.4,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 4,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "east": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 3,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "south": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 3,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "west": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 2,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     },
+     "core": {
+      "t_zone": 22.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 3,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 20.0,
+      "prev_cool": 22.5
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 16:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "A zone is occupied and bookings expect it to empty within the hour at the end of the day.",
+    "A critical peak event is active now."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO12",
+    "TAR03",
+    "CP01",
+    "SOO02",
+    "TAR04",
+    "SOO04",
+    "SOO03"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO12",
+    "TAR03"
+   ],
+   "strategy": "critical_shed",
+   "rationale": "north: critical_shed; east: critical_shed; south: critical_shed; west: critical_shed; core: critical_shed",
+   "citations": [
+    "SOO01",
+    "TAR03",
+    "SOO12"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "critical",
+     "h_to_peak": 0,
+     "dr_today": true,
+     "h_to_dr": 0,
+     "t_out": 31.9,
+     "t_out_max_6h": 31.1,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.9,
+     "econ_ok": false,
+     "demand_ratio": 0.5,
+     "hour": 16,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 16:00",
+     "demand_kw": 17.7,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 3,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 25.5
+     },
+     "east": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 2,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 25.5
+     },
+     "south": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 2,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 25.5
+     },
+     "west": {
+      "t_zone": 25.5,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 1,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 25.5
+     },
+     "core": {
+      "t_zone": 25.4,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 2,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 20.5,
+      "prev_cool": 25.5
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 17:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "A zone is occupied and bookings expect it to empty within the hour at the end of the day.",
+    "A critical peak event is active now."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO02",
+    "SOO12",
+    "TAR03",
+    "CP02",
+    "CP01",
+    "TAR04",
+    "SOO04"
+   ],
+   "applicable": [
+    "SOO01",
+    "SOO02",
+    "SOO12",
+    "TAR03"
+   ],
+   "strategy": "critical_shed",
+   "rationale": "north: critical_shed; east: critical_shed; south: critical_shed; west: critical_shed; core: critical_shed",
+   "citations": [
+    "SOO01",
+    "TAR03",
+    "SOO12",
+    "SOO02"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 21.0,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "critical",
+     "h_to_peak": 0,
+     "dr_today": true,
+     "h_to_dr": 0,
+     "t_out": 31.1,
+     "t_out_max_6h": 31.1,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 25.0,
+     "econ_ok": false,
+     "demand_ratio": 0.5,
+     "hour": 17,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 17:00",
+     "demand_kw": 16.4,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 2,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 26.0
+     },
+     "east": {
+      "t_zone": 26.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 1,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 26.0
+     },
+     "south": {
+      "t_zone": 26.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 1,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 26.0
+     },
+     "west": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 15,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 26.0
+     },
+     "core": {
+      "t_zone": 26.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 1,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 21.0,
+      "prev_cool": 26.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 18:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are occupied with people present in cooling season with warm weather.",
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "A zone is occupied and bookings expect it to empty within the hour at the end of the day.",
+    "The core zone is unoccupied.",
+    "A critical peak event is active now."
+   ],
+   "retrieved": [
+    "SOO01",
+    "SOO02",
+    "SOO12",
+    "TAR03",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "CP01"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO01",
+    "SOO02",
+    "SOO12",
+    "TAR03"
+   ],
+   "strategy": "critical_shed",
+   "rationale": "north: critical_shed; east: critical_shed; south: critical_shed; west: critical_shed; core: critical_shed",
+   "citations": [
+    "SOO01",
+    "SOO12",
+    "TAR03",
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 28.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 20.5,
+     "cool": 26.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [
+     {
+      "zone": "core",
+      "constraint": "C_CORE_COOL",
+      "source": "CP04",
+      "field": "cool",
+      "proposed": 28.0,
+      "repaired": 27.0,
+      "reason": "Network cabinets in the core need a cooler ceiling than open offices"
+     }
+    ],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "critical",
+     "h_to_peak": 0,
+     "dr_today": true,
+     "h_to_dr": 0,
+     "t_out": 30.5,
+     "t_out_max_6h": 30.0,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.8,
+     "econ_ok": false,
+     "demand_ratio": 0.4,
+     "hour": 18,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 18:00",
+     "demand_kw": 13.2,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.0,
+      "occupied": true,
+      "h_to_occ": 0,
+      "h_to_vacant": 1,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 21.0,
+      "prev_cool": 26.0
+     },
+     "east": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 14,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 26.0
+     },
+     "south": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 13,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 26.0
+     },
+     "west": {
+      "t_zone": 27.6,
+      "occupied": false,
+      "h_to_occ": 14,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.8,
+      "occupied": false,
+      "h_to_occ": 14,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 20.5,
+      "prev_cool": 26.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 19:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied.",
+    "The peak tariff window is active now in cooling season."
+   ],
+   "retrieved": [
+    "SOO02",
+    "SOO06",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "SOO13",
+    "SOO14",
+    "TAR01"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "peak",
+     "h_to_peak": 0,
+     "dr_today": true,
+     "h_to_dr": 20,
+     "t_out": 29.1,
+     "t_out_max_6h": 28.3,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.8,
+     "econ_ok": false,
+     "demand_ratio": 0.1,
+     "hour": 19,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 19:00",
+     "demand_kw": 3.2,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 13,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 20.5,
+      "prev_cool": 26.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 13,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 12,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.9,
+      "occupied": false,
+      "h_to_occ": 13,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.7,
+      "occupied": false,
+      "h_to_occ": 13,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 20:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "mid",
+     "h_to_peak": 19,
+     "dr_today": true,
+     "h_to_dr": 19,
+     "t_out": 28.0,
+     "t_out_max_6h": 27.8,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.8,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 20,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 20:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 12,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 12,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 11,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.7,
+      "occupied": false,
+      "h_to_occ": 12,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.8,
+      "occupied": false,
+      "h_to_occ": 12,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 21:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "mid",
+     "h_to_peak": 18,
+     "dr_today": true,
+     "h_to_dr": 18,
+     "t_out": 27.8,
+     "t_out_max_6h": 27.8,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.9,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 21,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 21:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 11,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 11,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.5,
+      "occupied": false,
+      "h_to_occ": 10,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.7,
+      "occupied": false,
+      "h_to_occ": 11,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.9,
+      "occupied": false,
+      "h_to_occ": 11,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 22:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 17,
+     "dr_today": true,
+     "h_to_dr": 17,
+     "t_out": 27.5,
+     "t_out_max_6h": 27.2,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.9,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 22,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 22:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 10,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 10,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 9,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.6,
+      "occupied": false,
+      "h_to_occ": 10,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 25.9,
+      "occupied": false,
+      "h_to_occ": 10,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  },
+  {
+   "time": "Thu 17 Jul 23:00",
+   "backend": "offline",
+   "fallback_used": false,
+   "knobs": {
+    "start_lead": 2,
+    "peak_strategy": "light",
+    "setback": "deep"
+   },
+   "knob_selection": {
+    "how": "episodic memory",
+    "explored": false,
+    "neighbours": 150,
+    "effects": {
+     "start_lead": {
+      "1": {
+       "saving_vs_default": -0.17,
+       "std_error": 1.61
+      },
+      "2": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.38
+      },
+      "3": {
+       "saving_vs_default": 0.86,
+       "std_error": 1.37
+      }
+     },
+     "peak_strategy": {
+      "none": {
+       "saving_vs_default": -0.73,
+       "std_error": 1.54
+      },
+      "light": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.12
+      },
+      "deep": {
+       "saving_vs_default": 0.61,
+       "std_error": 1.54
+      }
+     },
+     "setback": {
+      "deep": {
+       "saving_vs_default": 0.0,
+       "std_error": 1.11
+      },
+      "standard": {
+       "saving_vs_default": -0.2,
+       "std_error": 1.61
+      },
+      "shallow": {
+       "saving_vs_default": 0.35,
+       "std_error": 1.52
+      }
+     }
+    },
+    "residual_sd": 6.89
+   },
+   "facets": [
+    "Zones are unoccupied and empty with nobody expected soon, at night, a weekend or a holiday.",
+    "The core zone is unoccupied."
+   ],
+   "retrieved": [
+    "SOO02",
+    "CP04",
+    "CP02",
+    "SOO11",
+    "TAR01",
+    "OPS06",
+    "SOO12",
+    "SOO04"
+   ],
+   "applicable": [
+    "CP04",
+    "SOO02"
+   ],
+   "strategy": "setback+core_ceiling",
+   "rationale": "north: setback; east: setback; south: setback; west: setback; core: core_ceiling",
+   "citations": [
+    "SOO02",
+    "CP04"
+   ],
+   "proposed": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "commands": {
+    "north": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "east": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "south": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "west": {
+     "heat": 15.5,
+     "cool": 30.0,
+     "lockout": false
+    },
+    "core": {
+     "heat": 15.5,
+     "cool": 27.0,
+     "lockout": false
+    }
+   },
+   "verification": {
+    "violations": [],
+    "ungrounded_citations": []
+   },
+   "situation": {
+    "building": {
+     "mode": "cooling",
+     "tariff": "off",
+     "h_to_peak": 16,
+     "dr_today": true,
+     "h_to_dr": 16,
+     "t_out": 27.2,
+     "t_out_max_6h": 27.2,
+     "t_out_max_24h": 34.7,
+     "t_out_min_12h": 24.9,
+     "econ_ok": false,
+     "demand_ratio": 0.0,
+     "hour": 23,
+     "weekday": 3,
+     "is_monday": false,
+     "is_workday": true,
+     "time": "Thu 17 Jul 23:00",
+     "demand_kw": 1.6,
+     "month_peak_kw": 34.4
+    },
+    "zones": {
+     "north": {
+      "t_zone": 26.7,
+      "occupied": false,
+      "h_to_occ": 9,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "north",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "east": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 9,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "east",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "south": {
+      "t_zone": 26.6,
+      "occupied": false,
+      "h_to_occ": 8,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "south",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "west": {
+      "t_zone": 27.6,
+      "occupied": false,
+      "h_to_occ": 9,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "west",
+      "kind": "perimeter",
+      "prev_heat": 15.5,
+      "prev_cool": 30.0
+     },
+     "core": {
+      "t_zone": 26.0,
+      "occupied": false,
+      "h_to_occ": 9,
+      "h_to_vacant": 0,
+      "noshow_h": 0,
+      "orientation": "core",
+      "kind": "core",
+      "prev_heat": 15.5,
+      "prev_cool": 27.0
+     }
+    }
+   }
+  }
+ ]
+}

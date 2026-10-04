@@ -1,0 +1,9 @@
+numpy>=1.26
+pandas>=2.0
+pyyaml>=6.0
+pydantic>=2.5
+matplotlib>=3.8
+pytest>=8.0
+# Optional: language model backend and neural embeddings
+# anthropic>=0.40
+# sentence-transformers>=3.0

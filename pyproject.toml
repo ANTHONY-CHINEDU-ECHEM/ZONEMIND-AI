@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zonemind"
+version = "1.0.0"
+description = "Retrieval grounded adaptive setpoint control for smart buildings"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = ["numpy>=1.26", "pandas>=2.0", "pyyaml>=6.0", "pydantic>=2.5", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+llm = ["anthropic>=0.40"]
+neural = ["sentence-transformers>=3.0"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+zonemind = "zonemind.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+src = ["src"]

@@ -1,0 +1,866 @@
+[
+ {
+  "climate": "chicago",
+  "retriever": "BM25",
+  "k": 2,
+  "recall": 0.8111592193955203,
+  "full_coverage": 0.6142694063926941,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "BM25",
+  "k": 4,
+  "recall": 0.9681028484453137,
+  "full_coverage": 0.8946347031963471,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "BM25",
+  "k": 6,
+  "recall": 0.9919338443139811,
+  "full_coverage": 0.9670091324200913,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "BM25",
+  "k": 8,
+  "recall": 0.9962557077625568,
+  "full_coverage": 0.9849315068493151,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "BM25",
+  "k": 10,
+  "recall": 0.9981392694063925,
+  "full_coverage": 0.9917808219178083,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "BM25",
+  "k": 12,
+  "recall": 0.9995890410958904,
+  "full_coverage": 0.9979452054794521,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "LSA dense",
+  "k": 2,
+  "recall": 0.8612453794303105,
+  "full_coverage": 0.6756849315068493,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "LSA dense",
+  "k": 4,
+  "recall": 0.9741631332898449,
+  "full_coverage": 0.9093607305936073,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "LSA dense",
+  "k": 6,
+  "recall": 0.9915139160687103,
+  "full_coverage": 0.9667808219178082,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "LSA dense",
+  "k": 8,
+  "recall": 0.9941476407914762,
+  "full_coverage": 0.9777397260273972,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "LSA dense",
+  "k": 10,
+  "recall": 0.9969254185692541,
+  "full_coverage": 0.9865296803652968,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "LSA dense",
+  "k": 12,
+  "recall": 0.9990753424657531,
+  "full_coverage": 0.9952054794520548,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, single query",
+  "k": 2,
+  "recall": 0.7723222439660793,
+  "full_coverage": 0.5605022831050228,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, single query",
+  "k": 4,
+  "recall": 0.8765560447923462,
+  "full_coverage": 0.7219178082191781,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, single query",
+  "k": 6,
+  "recall": 0.9199584148727986,
+  "full_coverage": 0.8085616438356165,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, single query",
+  "k": 8,
+  "recall": 0.946174168297456,
+  "full_coverage": 0.8632420091324201,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, single query",
+  "k": 10,
+  "recall": 0.9802158077843008,
+  "full_coverage": 0.939041095890411,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, single query",
+  "k": 12,
+  "recall": 0.9938445857795172,
+  "full_coverage": 0.9753424657534246,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, decomposed",
+  "k": 2,
+  "recall": 0.8306137203739936,
+  "full_coverage": 0.617579908675799,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, decomposed",
+  "k": 4,
+  "recall": 0.9746406827571203,
+  "full_coverage": 0.9116438356164384,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, decomposed",
+  "k": 6,
+  "recall": 0.9926079038921503,
+  "full_coverage": 0.970662100456621,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, decomposed",
+  "k": 8,
+  "recall": 0.994809741248097,
+  "full_coverage": 0.980593607305936,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, decomposed",
+  "k": 10,
+  "recall": 0.9977397260273971,
+  "full_coverage": 0.9901826484018265,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "chicago",
+  "retriever": "Hybrid, decomposed",
+  "k": 12,
+  "recall": 0.9995662100456619,
+  "full_coverage": 0.9978310502283105,
+  "decisions": 8760,
+  "distinct_situations": 308
+ },
+ {
+  "climate": "tampa",
+  "retriever": "BM25",
+  "k": 2,
+  "recall": 0.8720588714938027,
+  "full_coverage": 0.6988584474885845,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "BM25",
+  "k": 4,
+  "recall": 0.9835545770819738,
+  "full_coverage": 0.9407534246575342,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "BM25",
+  "k": 6,
+  "recall": 0.9955221243748643,
+  "full_coverage": 0.9825342465753425,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "BM25",
+  "k": 8,
+  "recall": 0.9976769406392696,
+  "full_coverage": 0.9901826484018265,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "BM25",
+  "k": 10,
+  "recall": 0.9988222983257231,
+  "full_coverage": 0.9946347031963471,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "BM25",
+  "k": 12,
+  "recall": 0.9997260273972604,
+  "full_coverage": 0.9986301369863013,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "LSA dense",
+  "k": 2,
+  "recall": 0.8743762230919765,
+  "full_coverage": 0.7017123287671233,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "LSA dense",
+  "k": 4,
+  "recall": 0.9822760382691885,
+  "full_coverage": 0.9368721461187215,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "LSA dense",
+  "k": 6,
+  "recall": 0.9947991411176346,
+  "full_coverage": 0.9799086757990868,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "LSA dense",
+  "k": 8,
+  "recall": 0.996017884322679,
+  "full_coverage": 0.984703196347032,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "LSA dense",
+  "k": 10,
+  "recall": 0.9979280821917811,
+  "full_coverage": 0.9907534246575342,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "LSA dense",
+  "k": 12,
+  "recall": 0.9993074581430746,
+  "full_coverage": 0.9963470319634703,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, single query",
+  "k": 2,
+  "recall": 0.794532235268536,
+  "full_coverage": 0.6045662100456621,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, single query",
+  "k": 4,
+  "recall": 0.8823388236573174,
+  "full_coverage": 0.7267123287671233,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, single query",
+  "k": 6,
+  "recall": 0.9278296912372261,
+  "full_coverage": 0.8187214611872146,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, single query",
+  "k": 8,
+  "recall": 0.9525339747771258,
+  "full_coverage": 0.868607305936073,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, single query",
+  "k": 10,
+  "recall": 0.9801994998912809,
+  "full_coverage": 0.9350456621004566,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, single query",
+  "k": 12,
+  "recall": 0.9948287671232877,
+  "full_coverage": 0.9761415525114155,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, decomposed",
+  "k": 2,
+  "recall": 0.8507651119808652,
+  "full_coverage": 0.6545662100456621,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, decomposed",
+  "k": 4,
+  "recall": 0.9834118830180468,
+  "full_coverage": 0.9410958904109589,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, decomposed",
+  "k": 6,
+  "recall": 0.9955030984996741,
+  "full_coverage": 0.9824200913242009,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, decomposed",
+  "k": 8,
+  "recall": 0.996383181126332,
+  "full_coverage": 0.9863013698630136,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, decomposed",
+  "k": 10,
+  "recall": 0.9984227549467276,
+  "full_coverage": 0.9930365296803653,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "tampa",
+  "retriever": "Hybrid, decomposed",
+  "k": 12,
+  "recall": 0.9997260273972604,
+  "full_coverage": 0.9986301369863013,
+  "decisions": 8760,
+  "distinct_situations": 236
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "BM25",
+  "k": 2,
+  "recall": 0.8156754185692544,
+  "full_coverage": 0.5848173515981735,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "BM25",
+  "k": 4,
+  "recall": 0.9427054794520546,
+  "full_coverage": 0.8152968036529681,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "BM25",
+  "k": 6,
+  "recall": 0.9762652207001523,
+  "full_coverage": 0.9071917808219178,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "BM25",
+  "k": 8,
+  "recall": 0.9858542617960427,
+  "full_coverage": 0.9414383561643835,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "BM25",
+  "k": 10,
+  "recall": 0.9929737442922375,
+  "full_coverage": 0.9680365296803652,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "BM25",
+  "k": 12,
+  "recall": 0.998154490106545,
+  "full_coverage": 0.9907534246575342,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "LSA dense",
+  "k": 2,
+  "recall": 0.8243074581430748,
+  "full_coverage": 0.5955479452054795,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "LSA dense",
+  "k": 4,
+  "recall": 0.9354889649923902,
+  "full_coverage": 0.7936073059360731,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "LSA dense",
+  "k": 6,
+  "recall": 0.971023592085236,
+  "full_coverage": 0.8882420091324201,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "LSA dense",
+  "k": 8,
+  "recall": 0.9783314307458144,
+  "full_coverage": 0.916095890410959,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "LSA dense",
+  "k": 10,
+  "recall": 0.9884227549467276,
+  "full_coverage": 0.9480593607305936,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "LSA dense",
+  "k": 12,
+  "recall": 0.9958523592085238,
+  "full_coverage": 0.978310502283105,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, single query",
+  "k": 2,
+  "recall": 0.7630821917808217,
+  "full_coverage": 0.5213470319634703,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, single query",
+  "k": 4,
+  "recall": 0.8771993911719947,
+  "full_coverage": 0.7221461187214612,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, single query",
+  "k": 6,
+  "recall": 0.8999923896499248,
+  "full_coverage": 0.7527397260273972,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, single query",
+  "k": 8,
+  "recall": 0.92738394216134,
+  "full_coverage": 0.804337899543379,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, single query",
+  "k": 10,
+  "recall": 0.9838013698630137,
+  "full_coverage": 0.9461187214611873,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, single query",
+  "k": 12,
+  "recall": 0.9960083713850837,
+  "full_coverage": 0.9801369863013699,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, decomposed",
+  "k": 2,
+  "recall": 0.8070890410958905,
+  "full_coverage": 0.5611872146118722,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, decomposed",
+  "k": 4,
+  "recall": 0.9415410958904107,
+  "full_coverage": 0.8182648401826484,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, decomposed",
+  "k": 6,
+  "recall": 0.9762937595129376,
+  "full_coverage": 0.9074200913242009,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, decomposed",
+  "k": 8,
+  "recall": 0.9806411719939119,
+  "full_coverage": 0.9260273972602739,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, decomposed",
+  "k": 10,
+  "recall": 0.9916495433789955,
+  "full_coverage": 0.9627853881278539,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "san_francisco",
+  "retriever": "Hybrid, decomposed",
+  "k": 12,
+  "recall": 0.9981278538812786,
+  "full_coverage": 0.9906392694063927,
+  "decisions": 8760,
+  "distinct_situations": 218
+ },
+ {
+  "climate": "golden",
+  "retriever": "BM25",
+  "k": 2,
+  "recall": 0.809924983692106,
+  "full_coverage": 0.6092465753424657,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "BM25",
+  "k": 4,
+  "recall": 0.9669172646227427,
+  "full_coverage": 0.8905251141552512,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "BM25",
+  "k": 6,
+  "recall": 0.9914247662535332,
+  "full_coverage": 0.9651826484018264,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "BM25",
+  "k": 8,
+  "recall": 0.9959969558599693,
+  "full_coverage": 0.9834474885844748,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "BM25",
+  "k": 10,
+  "recall": 0.998015601217656,
+  "full_coverage": 0.9909817351598174,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "BM25",
+  "k": 12,
+  "recall": 0.9994520547945206,
+  "full_coverage": 0.9972602739726028,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "LSA dense",
+  "k": 2,
+  "recall": 0.8592468471406818,
+  "full_coverage": 0.6699771689497717,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "LSA dense",
+  "k": 4,
+  "recall": 0.9726413350728403,
+  "full_coverage": 0.9047945205479452,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "LSA dense",
+  "k": 6,
+  "recall": 0.9904327027614696,
+  "full_coverage": 0.9628995433789954,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "LSA dense",
+  "k": 8,
+  "recall": 0.993247716894977,
+  "full_coverage": 0.9742009132420091,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "LSA dense",
+  "k": 10,
+  "recall": 0.9965810502283104,
+  "full_coverage": 0.984703196347032,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "LSA dense",
+  "k": 12,
+  "recall": 0.9986834094368342,
+  "full_coverage": 0.9931506849315068,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, single query",
+  "k": 2,
+  "recall": 0.770015492498368,
+  "full_coverage": 0.5478310502283105,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, single query",
+  "k": 4,
+  "recall": 0.8787875081539472,
+  "full_coverage": 0.7223744292237443,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, single query",
+  "k": 6,
+  "recall": 0.9174111219830405,
+  "full_coverage": 0.8005707762557077,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, single query",
+  "k": 8,
+  "recall": 0.9463190367471189,
+  "full_coverage": 0.860730593607306,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, single query",
+  "k": 10,
+  "recall": 0.9819536855838221,
+  "full_coverage": 0.9424657534246575,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, single query",
+  "k": 12,
+  "recall": 0.9949094911937375,
+  "full_coverage": 0.977054794520548,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, decomposed",
+  "k": 2,
+  "recall": 0.8284059034572725,
+  "full_coverage": 0.6106164383561644,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, decomposed",
+  "k": 4,
+  "recall": 0.9736021417699483,
+  "full_coverage": 0.9092465753424658,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, decomposed",
+  "k": 6,
+  "recall": 0.9919547727766903,
+  "full_coverage": 0.9682648401826484,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, decomposed",
+  "k": 8,
+  "recall": 0.9940182648401825,
+  "full_coverage": 0.9775114155251141,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, decomposed",
+  "k": 10,
+  "recall": 0.997644596651446,
+  "full_coverage": 0.9894977168949771,
+  "decisions": 8760,
+  "distinct_situations": 300
+ },
+ {
+  "climate": "golden",
+  "retriever": "Hybrid, decomposed",
+  "k": 12,
+  "recall": 0.9994520547945206,
+  "full_coverage": 0.9972602739726028,
+  "decisions": 8760,
+  "distinct_situations": 300
+ }
+]
