@@ -1,0 +1,606 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+new file mode 100644
+index 0000000..70f6764
+--- /dev/null
++++ b/.github/workflows/ci.yml
+@@ -0,0 +1,22 @@
++name: CI
++
++on:
++  push:
++    branches: [main]
++  pull_request:
++
++jobs:
++  test:
++    runs-on: ubuntu-latest
++    steps:
++      - uses: actions/checkout@v4
++      - uses: actions/setup-python@v5
++        with:
++          python-version: "3.12"
++          cache: pip
++      - name: Install
++        run: |
++          python -m pip install --upgrade pip
++          pip install -e ".[dev]"
++      - name: Test
++        run: pytest
+diff --git a/anthropic_three_days.yaml b/configs/anthropic_three_days.yaml
+similarity index 100%
+rename from anthropic_three_days.yaml
+rename to configs/anthropic_three_days.yaml
+diff --git a/default.yaml b/configs/default.yaml
+similarity index 100%
+rename from default.yaml
+rename to configs/default.yaml
+diff --git a/flat_demand_tariff.yaml b/configs/flat_demand_tariff.yaml
+similarity index 100%
+rename from flat_demand_tariff.yaml
+rename to configs/flat_demand_tariff.yaml
+diff --git a/local_model_three_days.yaml b/configs/local_model_three_days.yaml
+similarity index 100%
+rename from local_model_three_days.yaml
+rename to configs/local_model_three_days.yaml
+diff --git a/CP01_occupied_comfort_envelope.md b/data/knowledge_base/CP01_occupied_comfort_envelope.md
+similarity index 100%
+rename from CP01_occupied_comfort_envelope.md
+rename to data/knowledge_base/CP01_occupied_comfort_envelope.md
+diff --git a/CP02_unoccupied_temperature_limits.md b/data/knowledge_base/CP02_unoccupied_temperature_limits.md
+similarity index 100%
+rename from CP02_unoccupied_temperature_limits.md
+rename to data/knowledge_base/CP02_unoccupied_temperature_limits.md
+diff --git a/CP03_setpoint_rate_of_change.md b/data/knowledge_base/CP03_setpoint_rate_of_change.md
+similarity index 100%
+rename from CP03_setpoint_rate_of_change.md
+rename to data/knowledge_base/CP03_setpoint_rate_of_change.md
+diff --git a/CP04_core_zone_upper_limit.md b/data/knowledge_base/CP04_core_zone_upper_limit.md
+similarity index 100%
+rename from CP04_core_zone_upper_limit.md
+rename to data/knowledge_base/CP04_core_zone_upper_limit.md
+diff --git a/CP05_dead_band.md b/data/knowledge_base/CP05_dead_band.md
+similarity index 100%
+rename from CP05_dead_band.md
+rename to data/knowledge_base/CP05_dead_band.md
+diff --git a/CP06_comfort_complaint_handling.md b/data/knowledge_base/CP06_comfort_complaint_handling.md
+similarity index 100%
+rename from CP06_comfort_complaint_handling.md
+rename to data/knowledge_base/CP06_comfort_complaint_handling.md
+diff --git a/EQP01_heat_pump_envelope.md b/data/knowledge_base/EQP01_heat_pump_envelope.md
+similarity index 100%
+rename from EQP01_heat_pump_envelope.md
+rename to data/knowledge_base/EQP01_heat_pump_envelope.md
+diff --git a/EQP02_mechanical_cooling_lockout.md b/data/knowledge_base/EQP02_mechanical_cooling_lockout.md
+similarity index 100%
+rename from EQP02_mechanical_cooling_lockout.md
+rename to data/knowledge_base/EQP02_mechanical_cooling_lockout.md
+diff --git a/EQP03_efficiency_and_outdoor_temperature.md b/data/knowledge_base/EQP03_efficiency_and_outdoor_temperature.md
+similarity index 100%
+rename from EQP03_efficiency_and_outdoor_temperature.md
+rename to data/knowledge_base/EQP03_efficiency_and_outdoor_temperature.md
+diff --git a/EQP04_ventilation_minimum.md b/data/knowledge_base/EQP04_ventilation_minimum.md
+similarity index 100%
+rename from EQP04_ventilation_minimum.md
+rename to data/knowledge_base/EQP04_ventilation_minimum.md
+diff --git a/EQP05_freeze_protection.md b/data/knowledge_base/EQP05_freeze_protection.md
+similarity index 100%
+rename from EQP05_freeze_protection.md
+rename to data/knowledge_base/EQP05_freeze_protection.md
+diff --git a/OPS01_filter_replacement.md b/data/knowledge_base/OPS01_filter_replacement.md
+similarity index 100%
+rename from OPS01_filter_replacement.md
+rename to data/knowledge_base/OPS01_filter_replacement.md
+diff --git a/OPS02_sensor_calibration.md b/data/knowledge_base/OPS02_sensor_calibration.md
+similarity index 100%
+rename from OPS02_sensor_calibration.md
+rename to data/knowledge_base/OPS02_sensor_calibration.md
+diff --git a/OPS03_humidity_management.md b/data/knowledge_base/OPS03_humidity_management.md
+similarity index 100%
+rename from OPS03_humidity_management.md
+rename to data/knowledge_base/OPS03_humidity_management.md
+diff --git a/OPS04_seasonal_changeover.md b/data/knowledge_base/OPS04_seasonal_changeover.md
+similarity index 100%
+rename from OPS04_seasonal_changeover.md
+rename to data/knowledge_base/OPS04_seasonal_changeover.md
+diff --git a/OPS05_stuck_damper_response.md b/data/knowledge_base/OPS05_stuck_damper_response.md
+similarity index 100%
+rename from OPS05_stuck_damper_response.md
+rename to data/knowledge_base/OPS05_stuck_damper_response.md
+diff --git a/OPS06_holiday_calendar.md b/data/knowledge_base/OPS06_holiday_calendar.md
+similarity index 100%
+rename from OPS06_holiday_calendar.md
+rename to data/knowledge_base/OPS06_holiday_calendar.md
+diff --git a/OPS07_alarm_escalation.md b/data/knowledge_base/OPS07_alarm_escalation.md
+similarity index 100%
+rename from OPS07_alarm_escalation.md
+rename to data/knowledge_base/OPS07_alarm_escalation.md
+diff --git a/OPS08_refrigerant_leak_procedure.md b/data/knowledge_base/OPS08_refrigerant_leak_procedure.md
+similarity index 100%
+rename from OPS08_refrigerant_leak_procedure.md
+rename to data/knowledge_base/OPS08_refrigerant_leak_procedure.md
+diff --git a/PB01_heat_wave_playbook.md b/data/knowledge_base/PB01_heat_wave_playbook.md
+similarity index 100%
+rename from PB01_heat_wave_playbook.md
+rename to data/knowledge_base/PB01_heat_wave_playbook.md
+diff --git a/PB02_cold_snap_playbook.md b/data/knowledge_base/PB02_cold_snap_playbook.md
+similarity index 100%
+rename from PB02_cold_snap_playbook.md
+rename to data/knowledge_base/PB02_cold_snap_playbook.md
+diff --git a/PB03_monday_morning_recovery.md b/data/knowledge_base/PB03_monday_morning_recovery.md
+similarity index 100%
+rename from PB03_monday_morning_recovery.md
+rename to data/knowledge_base/PB03_monday_morning_recovery.md
+diff --git a/PB04_shoulder_season_dead_band.md b/data/knowledge_base/PB04_shoulder_season_dead_band.md
+similarity index 100%
+rename from PB04_shoulder_season_dead_band.md
+rename to data/knowledge_base/PB04_shoulder_season_dead_band.md
+diff --git a/PB05_low_attendance_days.md b/data/knowledge_base/PB05_low_attendance_days.md
+similarity index 100%
+rename from PB05_low_attendance_days.md
+rename to data/knowledge_base/PB05_low_attendance_days.md
+diff --git a/SOO01_occupied_mode.md b/data/knowledge_base/SOO01_occupied_mode.md
+similarity index 100%
+rename from SOO01_occupied_mode.md
+rename to data/knowledge_base/SOO01_occupied_mode.md
+diff --git a/SOO02_unoccupied_setback.md b/data/knowledge_base/SOO02_unoccupied_setback.md
+similarity index 100%
+rename from SOO02_unoccupied_setback.md
+rename to data/knowledge_base/SOO02_unoccupied_setback.md
+diff --git a/SOO03_optimal_start_heating.md b/data/knowledge_base/SOO03_optimal_start_heating.md
+similarity index 100%
+rename from SOO03_optimal_start_heating.md
+rename to data/knowledge_base/SOO03_optimal_start_heating.md
+diff --git a/SOO04_optimal_start_cooling.md b/data/knowledge_base/SOO04_optimal_start_cooling.md
+similarity index 100%
+rename from SOO04_optimal_start_cooling.md
+rename to data/knowledge_base/SOO04_optimal_start_cooling.md
+diff --git a/SOO05_precool_before_peak.md b/data/knowledge_base/SOO05_precool_before_peak.md
+similarity index 100%
+rename from SOO05_precool_before_peak.md
+rename to data/knowledge_base/SOO05_precool_before_peak.md
+diff --git a/SOO06_peak_window_float.md b/data/knowledge_base/SOO06_peak_window_float.md
+similarity index 100%
+rename from SOO06_peak_window_float.md
+rename to data/knowledge_base/SOO06_peak_window_float.md
+diff --git a/SOO07_night_flush.md b/data/knowledge_base/SOO07_night_flush.md
+similarity index 100%
+rename from SOO07_night_flush.md
+rename to data/knowledge_base/SOO07_night_flush.md
+diff --git a/SOO08_booked_but_vacant_standby.md b/data/knowledge_base/SOO08_booked_but_vacant_standby.md
+similarity index 100%
+rename from SOO08_booked_but_vacant_standby.md
+rename to data/knowledge_base/SOO08_booked_but_vacant_standby.md
+diff --git a/SOO09_demand_limiting.md b/data/knowledge_base/SOO09_demand_limiting.md
+similarity index 100%
+rename from SOO09_demand_limiting.md
+rename to data/knowledge_base/SOO09_demand_limiting.md
+diff --git a/SOO10_west_facade_solar.md b/data/knowledge_base/SOO10_west_facade_solar.md
+similarity index 100%
+rename from SOO10_west_facade_solar.md
+rename to data/knowledge_base/SOO10_west_facade_solar.md
+diff --git a/SOO11_staggered_core_start.md b/data/knowledge_base/SOO11_staggered_core_start.md
+similarity index 100%
+rename from SOO11_staggered_core_start.md
+rename to data/knowledge_base/SOO11_staggered_core_start.md
+diff --git a/SOO12_coast_before_vacancy.md b/data/knowledge_base/SOO12_coast_before_vacancy.md
+similarity index 100%
+rename from SOO12_coast_before_vacancy.md
+rename to data/knowledge_base/SOO12_coast_before_vacancy.md
+diff --git a/SOO13_heating_peak_trim.md b/data/knowledge_base/SOO13_heating_peak_trim.md
+similarity index 100%
+rename from SOO13_heating_peak_trim.md
+rename to data/knowledge_base/SOO13_heating_peak_trim.md
+diff --git a/SOO14_preheat_before_winter_peak.md b/data/knowledge_base/SOO14_preheat_before_winter_peak.md
+similarity index 100%
+rename from SOO14_preheat_before_winter_peak.md
+rename to data/knowledge_base/SOO14_preheat_before_winter_peak.md
+diff --git a/TAR01_time_of_use_schedule.md b/data/knowledge_base/TAR01_time_of_use_schedule.md
+similarity index 100%
+rename from TAR01_time_of_use_schedule.md
+rename to data/knowledge_base/TAR01_time_of_use_schedule.md
+diff --git a/TAR02_demand_charge.md b/data/knowledge_base/TAR02_demand_charge.md
+similarity index 100%
+rename from TAR02_demand_charge.md
+rename to data/knowledge_base/TAR02_demand_charge.md
+diff --git a/TAR03_critical_peak_events.md b/data/knowledge_base/TAR03_critical_peak_events.md
+similarity index 100%
+rename from TAR03_critical_peak_events.md
+rename to data/knowledge_base/TAR03_critical_peak_events.md
+diff --git a/TAR04_event_preconditioning.md b/data/knowledge_base/TAR04_event_preconditioning.md
+similarity index 100%
+rename from TAR04_event_preconditioning.md
+rename to data/knowledge_base/TAR04_event_preconditioning.md
+diff --git a/TAR05_post_peak_recovery.md b/data/knowledge_base/TAR05_post_peak_recovery.md
+similarity index 100%
+rename from TAR05_post_peak_recovery.md
+rename to data/knowledge_base/TAR05_post_peak_recovery.md
+diff --git a/chicago.epw b/data/weather/chicago.epw
+similarity index 100%
+rename from chicago.epw
+rename to data/weather/chicago.epw
+diff --git a/golden.epw b/data/weather/golden.epw
+similarity index 100%
+rename from golden.epw
+rename to data/weather/golden.epw
+diff --git a/san_francisco.epw b/data/weather/san_francisco.epw
+similarity index 100%
+rename from san_francisco.epw
+rename to data/weather/san_francisco.epw
+diff --git a/tampa.epw b/data/weather/tampa.epw
+similarity index 100%
+rename from tampa.epw
+rename to data/weather/tampa.epw
+diff --git a/KNOWLEDGE_BASE.md b/docs/KNOWLEDGE_BASE.md
+similarity index 100%
+rename from KNOWLEDGE_BASE.md
+rename to docs/KNOWLEDGE_BASE.md
+diff --git a/ablations.png b/docs/figures/ablations.png
+similarity index 100%
+rename from ablations.png
+rename to docs/figures/ablations.png
+diff --git a/architecture.png b/docs/figures/architecture.png
+similarity index 100%
+rename from architecture.png
+rename to docs/figures/architecture.png
+diff --git a/benchmark.png b/docs/figures/benchmark.png
+similarity index 100%
+rename from benchmark.png
+rename to docs/figures/benchmark.png
+diff --git a/event_day_chicago.png b/docs/figures/event_day_chicago.png
+similarity index 100%
+rename from event_day_chicago.png
+rename to docs/figures/event_day_chicago.png
+diff --git a/event_day_golden.png b/docs/figures/event_day_golden.png
+similarity index 100%
+rename from event_day_golden.png
+rename to docs/figures/event_day_golden.png
+diff --git a/event_day_san_francisco.png b/docs/figures/event_day_san_francisco.png
+similarity index 100%
+rename from event_day_san_francisco.png
+rename to docs/figures/event_day_san_francisco.png
+diff --git a/event_day_tampa.png b/docs/figures/event_day_tampa.png
+similarity index 100%
+rename from event_day_tampa.png
+rename to docs/figures/event_day_tampa.png
+diff --git a/memory.png b/docs/figures/memory.png
+similarity index 100%
+rename from memory.png
+rename to docs/figures/memory.png
+diff --git a/monthly_chicago.png b/docs/figures/monthly_chicago.png
+similarity index 100%
+rename from monthly_chicago.png
+rename to docs/figures/monthly_chicago.png
+diff --git a/monthly_tampa.png b/docs/figures/monthly_tampa.png
+similarity index 100%
+rename from monthly_tampa.png
+rename to docs/figures/monthly_tampa.png
+diff --git a/retrieval.png b/docs/figures/retrieval.png
+similarity index 100%
+rename from retrieval.png
+rename to docs/figures/retrieval.png
+diff --git a/robustness.png b/docs/figures/robustness.png
+similarity index 100%
+rename from robustness.png
+rename to docs/figures/robustness.png
+diff --git a/ablations.json b/results/ablations.json
+similarity index 100%
+rename from ablations.json
+rename to results/ablations.json
+diff --git a/benchmark.json b/results/benchmark.json
+similarity index 100%
+rename from benchmark.json
+rename to results/benchmark.json
+diff --git a/event_day_chicago.npz b/results/event_day_chicago.npz
+similarity index 100%
+rename from event_day_chicago.npz
+rename to results/event_day_chicago.npz
+diff --git a/event_day_golden.npz b/results/event_day_golden.npz
+similarity index 100%
+rename from event_day_golden.npz
+rename to results/event_day_golden.npz
+diff --git a/event_day_san_francisco.npz b/results/event_day_san_francisco.npz
+similarity index 100%
+rename from event_day_san_francisco.npz
+rename to results/event_day_san_francisco.npz
+diff --git a/event_day_tampa.npz b/results/event_day_tampa.npz
+similarity index 100%
+rename from event_day_tampa.npz
+rename to results/event_day_tampa.npz
+diff --git a/knob_sensitivity.json b/results/knob_sensitivity.json
+similarity index 100%
+rename from knob_sensitivity.json
+rename to results/knob_sensitivity.json
+diff --git a/chicago.json b/results/memory/chicago.json
+similarity index 100%
+rename from chicago.json
+rename to results/memory/chicago.json
+diff --git a/golden.json b/results/memory/golden.json
+similarity index 100%
+rename from golden.json
+rename to results/memory/golden.json
+diff --git a/san_francisco.json b/results/memory/san_francisco.json
+similarity index 100%
+rename from san_francisco.json
+rename to results/memory/san_francisco.json
+diff --git a/tampa.json b/results/memory/tampa.json
+similarity index 100%
+rename from tampa.json
+rename to results/memory/tampa.json
+diff --git a/retrieval_budget.json b/results/retrieval_budget.json
+similarity index 100%
+rename from retrieval_budget.json
+rename to results/retrieval_budget.json
+diff --git a/retrieval_eval.json b/results/retrieval_eval.json
+similarity index 100%
+rename from retrieval_eval.json
+rename to results/retrieval_eval.json
+diff --git a/robustness.json b/results/robustness.json
+similarity index 100%
+rename from robustness.json
+rename to results/robustness.json
+diff --git a/summary.md b/results/summary.md
+similarity index 100%
+rename from summary.md
+rename to results/summary.md
+diff --git a/traces_chicago.json b/results/traces_chicago.json
+similarity index 100%
+rename from traces_chicago.json
+rename to results/traces_chicago.json
+diff --git a/traces_golden.json b/results/traces_golden.json
+similarity index 100%
+rename from traces_golden.json
+rename to results/traces_golden.json
+diff --git a/traces_san_francisco.json b/results/traces_san_francisco.json
+similarity index 100%
+rename from traces_san_francisco.json
+rename to results/traces_san_francisco.json
+diff --git a/traces_tampa.json b/results/traces_tampa.json
+similarity index 100%
+rename from traces_tampa.json
+rename to results/traces_tampa.json
+diff --git a/download_weather.py b/scripts/download_weather.py
+similarity index 100%
+rename from download_weather.py
+rename to scripts/download_weather.py
+diff --git a/__init__.py b/src/zonemind/__init__.py
+similarity index 100%
+rename from __init__.py
+rename to src/zonemind/__init__.py
+diff --git a/cli.py b/src/zonemind/cli.py
+similarity index 100%
+rename from cli.py
+rename to src/zonemind/cli.py
+diff --git a/config.py b/src/zonemind/config.py
+similarity index 100%
+rename from config.py
+rename to src/zonemind/config.py
+diff --git a/src/zonemind/control/__init__.py b/src/zonemind/control/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/agent.py b/src/zonemind/control/agent.py
+similarity index 100%
+rename from agent.py
+rename to src/zonemind/control/agent.py
+diff --git a/baselines.py b/src/zonemind/control/baselines.py
+similarity index 100%
+rename from baselines.py
+rename to src/zonemind/control/baselines.py
+diff --git a/situation.py b/src/zonemind/control/situation.py
+similarity index 100%
+rename from situation.py
+rename to src/zonemind/control/situation.py
+diff --git a/verbalizer.py b/src/zonemind/control/verbalizer.py
+similarity index 100%
+rename from verbalizer.py
+rename to src/zonemind/control/verbalizer.py
+diff --git a/verifier.py b/src/zonemind/control/verifier.py
+similarity index 100%
+rename from verifier.py
+rename to src/zonemind/control/verifier.py
+diff --git a/src/zonemind/data/__init__.py b/src/zonemind/data/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/calendar.py b/src/zonemind/data/calendar.py
+similarity index 100%
+rename from calendar.py
+rename to src/zonemind/data/calendar.py
+diff --git a/epw.py b/src/zonemind/data/epw.py
+similarity index 100%
+rename from epw.py
+rename to src/zonemind/data/epw.py
+diff --git a/occupancy.py b/src/zonemind/data/occupancy.py
+similarity index 100%
+rename from occupancy.py
+rename to src/zonemind/data/occupancy.py
+diff --git a/solar.py b/src/zonemind/data/solar.py
+similarity index 100%
+rename from solar.py
+rename to src/zonemind/data/solar.py
+diff --git a/tariff.py b/src/zonemind/data/tariff.py
+similarity index 100%
+rename from tariff.py
+rename to src/zonemind/data/tariff.py
+diff --git a/weather.py b/src/zonemind/data/weather.py
+similarity index 100%
+rename from weather.py
+rename to src/zonemind/data/weather.py
+diff --git a/src/zonemind/eval/__init__.py b/src/zonemind/eval/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/experiments.py b/src/zonemind/eval/experiments.py
+similarity index 100%
+rename from experiments.py
+rename to src/zonemind/eval/experiments.py
+diff --git a/metrics.py b/src/zonemind/eval/metrics.py
+similarity index 100%
+rename from metrics.py
+rename to src/zonemind/eval/metrics.py
+diff --git a/plots.py b/src/zonemind/eval/plots.py
+similarity index 100%
+rename from plots.py
+rename to src/zonemind/eval/plots.py
+diff --git a/report.py b/src/zonemind/eval/report.py
+similarity index 100%
+rename from report.py
+rename to src/zonemind/eval/report.py
+diff --git a/runner.py b/src/zonemind/eval/runner.py
+similarity index 100%
+rename from runner.py
+rename to src/zonemind/eval/runner.py
+diff --git a/src/zonemind/knowledge/__init__.py b/src/zonemind/knowledge/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/bm25.py b/src/zonemind/knowledge/bm25.py
+similarity index 100%
+rename from bm25.py
+rename to src/zonemind/knowledge/bm25.py
+diff --git a/dense.py b/src/zonemind/knowledge/dense.py
+similarity index 100%
+rename from dense.py
+rename to src/zonemind/knowledge/dense.py
+diff --git a/loader.py b/src/zonemind/knowledge/loader.py
+similarity index 100%
+rename from loader.py
+rename to src/zonemind/knowledge/loader.py
+diff --git a/retriever.py b/src/zonemind/knowledge/retriever.py
+similarity index 100%
+rename from retriever.py
+rename to src/zonemind/knowledge/retriever.py
+diff --git a/src/zonemind/knowledge/schema.py b/src/zonemind/knowledge/schema.py
+new file mode 100644
+index 0000000..bf15102
+--- /dev/null
++++ b/src/zonemind/knowledge/schema.py
+@@ -0,0 +1,55 @@
++"""Typed records for the governed knowledge base.
++
++A ``Document`` is one Markdown file. Its front matter yields ``Directive`` records for
++the deterministic reasoner and ``Constraint`` records for the verifier, and its prose
++is split into ``Chunk`` records for retrieval.
++"""
++from __future__ import annotations
++
++from dataclasses import dataclass, field
++
++
++@dataclass
++class Directive:
++    id: str
++    doc_id: str
++    priority: int
++    label: str
++    when: str
++    set: dict[str, str] = field(default_factory=dict)
++    lockout: bool = False
++
++
++@dataclass
++class Constraint:
++    """A hard limit. ``kind`` is one of bound, gap, rate or flag."""
++
++    id: str
++    doc_id: str
++    kind: str
++    reason: str = ""
++    when: str | None = None
++    var: str | None = None
++    min: float | None = None
++    max: float | None = None
++    max_delta: float | None = None
++    min_gap: float | None = None
++
++
++@dataclass
++class Chunk:
++    id: str
++    doc_id: str
++    heading: str
++    text: str
++
++
++@dataclass
++class Document:
++    id: str
++    title: str
++    category: str
++    tags: list[str] = field(default_factory=list)
++    body: str = ""
++    directives: list[Directive] = field(default_factory=list)
++    constraints: list[Constraint] = field(default_factory=list)
+diff --git a/text.py b/src/zonemind/knowledge/text.py
+similarity index 100%
+rename from text.py
+rename to src/zonemind/knowledge/text.py
+diff --git a/src/zonemind/llm/__init__.py b/src/zonemind/llm/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/backends.py b/src/zonemind/llm/backends.py
+similarity index 100%
+rename from backends.py
+rename to src/zonemind/llm/backends.py
+diff --git a/base.py b/src/zonemind/llm/base.py
+similarity index 100%
+rename from base.py
+rename to src/zonemind/llm/base.py
+diff --git a/chaos.py b/src/zonemind/llm/chaos.py
+similarity index 100%
+rename from chaos.py
+rename to src/zonemind/llm/chaos.py
+diff --git a/offline.py b/src/zonemind/llm/offline.py
+similarity index 100%
+rename from offline.py
+rename to src/zonemind/llm/offline.py
+diff --git a/parser.py b/src/zonemind/llm/parser.py
+similarity index 100%
+rename from parser.py
+rename to src/zonemind/llm/parser.py
+diff --git a/prompts.py b/src/zonemind/llm/prompts.py
+similarity index 100%
+rename from prompts.py
+rename to src/zonemind/llm/prompts.py
+diff --git a/schema.py b/src/zonemind/llm/schema.py
+similarity index 100%
+rename from schema.py
+rename to src/zonemind/llm/schema.py
+diff --git a/src/zonemind/memory/__init__.py b/src/zonemind/memory/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/episodic.py b/src/zonemind/memory/episodic.py
+similarity index 100%
+rename from episodic.py
+rename to src/zonemind/memory/episodic.py
+diff --git a/safe_eval.py b/src/zonemind/safe_eval.py
+similarity index 100%
+rename from safe_eval.py
+rename to src/zonemind/safe_eval.py
+diff --git a/src/zonemind/sim/__init__.py b/src/zonemind/sim/__init__.py
+new file mode 100644
+index 0000000..e69de29
+diff --git a/building.py b/src/zonemind/sim/building.py
+similarity index 100%
+rename from building.py
+rename to src/zonemind/sim/building.py
+diff --git a/comfort.py b/src/zonemind/sim/comfort.py
+similarity index 100%
+rename from comfort.py
+rename to src/zonemind/sim/comfort.py
+diff --git a/env.py b/src/zonemind/sim/env.py
+similarity index 100%
+rename from env.py
+rename to src/zonemind/sim/env.py
+diff --git a/variables.py b/src/zonemind/variables.py
+similarity index 100%
+rename from variables.py
+rename to src/zonemind/variables.py
+diff --git a/conftest.py b/tests/conftest.py
+similarity index 100%
+rename from conftest.py
+rename to tests/conftest.py
+diff --git a/test_agent.py b/tests/test_agent.py
+similarity index 100%
+rename from test_agent.py
+rename to tests/test_agent.py
+diff --git a/test_core.py b/tests/test_core.py
+similarity index 100%
+rename from test_core.py
+rename to tests/test_core.py
