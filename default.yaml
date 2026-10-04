@@ -1,0 +1,166 @@
+# ZoneMind AI default configuration.
+# Every number that shapes the experiment lives here so a run is fully described by one file.
+project:
+  name: ZoneMind AI
+  seed: 7
+
+run:                               # defaults for `zonemind run`, so a config file can describe a whole run
+  climate: chicago
+  controller: zonemind             # fixed | scheduled | scheduled_tou | zonemind
+  start_day: 0
+  days: null                       # null means to the end of the year
+  memory: true                     # attach the commissioned episodic memory
+  audit: null                      # path of a JSONL file for every decision trace
+
+sim:
+  dt_seconds: 300          # thermal integration step
+  decision_minutes: 60     # supervisory decision interval
+  year: 2025               # calendar used for weekdays and holidays
+  initial_temp_c: 21.0
+
+climates:
+  chicago: {file: data/weather/chicago.epw, label: "Chicago (cold continental)"}
+  tampa: {file: data/weather/tampa.epw, label: "Tampa (hot humid)"}
+  san_francisco: {file: data/weather/san_francisco.epw, label: "San Francisco (mild marine)"}
+  golden: {file: data/weather/golden.epw, label: "Golden (cool dry, high altitude)"}
+
+building:
+  ceiling_height_m: 3.0
+  zones:
+    - {name: north, orientation: north, kind: perimeter, area_m2: 150, window_m2: 30}
+    - {name: east,  orientation: east,  kind: perimeter, area_m2: 100, window_m2: 20}
+    - {name: south, orientation: south, kind: perimeter, area_m2: 150, window_m2: 30}
+    - {name: west,  orientation: west,  kind: perimeter, area_m2: 100, window_m2: 20}
+    - {name: core,  orientation: core,  kind: core,      area_m2: 300, window_m2: 0}
+  envelope:
+    window_u: 2.8                  # W/m2K
+    wall_u: 0.60
+    roof_u: 0.40
+    shgc: 0.35
+    wall_to_window_ratio: 2.0      # opaque wall area per unit window area
+    infiltration_ach: 0.50
+    air_capacity_multiplier: 6.0   # furnishings and light partitions
+    mass_capacity_kj_m2k: 180.0
+    air_mass_coupling_w_m2k: 15.0
+    partition_ua_w_k: 120.0        # each perimeter zone to the core
+    ground_reflectance: 0.2
+  gains:
+    area_per_person_m2: 10.0
+    people_sensible_w: 75.0
+    equipment_base_w_m2: 2.0
+    equipment_occupied_w_m2: 8.0
+    lighting_w_m2: 7.0
+    radiant_fraction: 0.4
+    solar_to_air_fraction: 0.3
+
+plant:
+  cool_cap_w_m2: 100.0
+  heat_cap_w_m2: 80.0
+  cop_cool_rated: 3.3              # at 35 C outdoor
+  cop_cool_slope: 0.025            # fractional gain per K below 35 C
+  cop_heat_rated: 3.2              # at 7 C outdoor
+  cop_heat_slope: 0.045            # absolute gain per K above 7 C
+  cop_heat_min: 1.6
+  cop_heat_max: 4.5
+  cop_cool_min: 1.8
+  cop_cool_max: 6.0
+  fan_w_m2: 4.0
+  vent_l_s_person: 10.0
+  vent_l_s_m2: 0.3
+  vent_min_flow_fraction: 0.3
+  heat_recovery_eff: 0.6
+  economizer_max_drybulb_c: 18.0
+  economizer_max_dewpoint_c: 13.0
+  design_supply_delta_k: 10.0
+  setpoint_ramp_k_per_h: 4.0       # local loop ramps a tightening setpoint instead of stepping it
+
+occupancy:
+  weekday_attendance: [0.60, 0.85, 0.85, 0.80, 0.50]   # Monday to Friday, hybrid working
+  attendance_sd: 0.10
+  zone_factor_sd: 0.25
+  zone_vacant_prob: 0.08
+  arrival_mean_h: 8.0
+  arrival_sd_h: 0.5
+  departure_mean_h: 17.5
+  departure_sd_h: 0.75
+  weekend_use_prob: 0.06
+  lunch_factor: 0.7
+  presence_threshold: 0.05
+  forecast_noise: 0.15            # multiplicative noise on booked attendance
+  forecast_time_sd_h: 0.4         # error on booked arrival and departure
+  noshow_prob: 0.06               # booked zone that nobody turns up to
+  holidays: ["01-01", "01-20", "05-26", "07-04", "09-01", "11-27", "11-28", "12-25"]
+
+tariff:
+  summer_months: [6, 7, 8, 9]
+  summer: {peak_hours: [15, 20], mid_hours: [[11, 15], [20, 22]], rate_peak: 0.36, rate_mid: 0.20, rate_off: 0.11}
+  winter: {peak_hours: [17, 20], mid_hours: [[6, 17], [20, 22]], rate_peak: 0.26, rate_mid: 0.15, rate_off: 0.10}
+  demand_anytime_per_kw: 5.0      # facilities charge on the highest quarter hour of the month
+  demand_peak_per_kw: 12.0        # additional charge on the highest quarter hour inside peak windows
+  critical:
+    price: 0.85
+    hours: [15, 19]
+    max_events: 12
+    percentile: 88               # of summer workday maximum temperature
+
+comfort:
+  band_c: [20.0, 26.0]
+  unmet_threshold_k: 0.5
+  met: 1.2
+  air_speed: 0.1
+  relative_humidity: 50.0
+  clo: {heating: 1.0, shoulder: 0.75, cooling: 0.5}
+  mode_thresholds: {cooling_mean_c: 18.0, cooling_max_c: 26.0, heating_mean_c: 10.0}
+
+forecast:
+  weather_error_sd_c: 1.0
+  weather_error_horizon_h: 12
+
+retrieval:
+  mode: hybrid                    # hybrid | bm25 | dense | none
+  top_k: 8
+  rrf_k: 60
+  decompose: true
+  dense_backend: lsa              # lsa (offline) | sentence_transformers
+  dense_dims: 48
+  st_model: sentence-transformers/all-MiniLM-L6-v2
+
+memory:
+  enabled: true
+  warmup_days: 28
+  neighbours: 150
+  bandwidth: 1.0
+  ridge: 1.0
+  confidence: 1.0                 # standard errors of evidence needed to leave a default knob
+  epsilon: 0.0                    # share of days spent exploring after commissioning
+  comfort_penalty_per_kh: 8.0
+  knobs:
+    start_lead: {values: [1, 2, 3], default: 2}
+    peak_strategy: {values: [none, light, deep], default: light}
+    setback: {values: [deep, standard, shallow], default: deep}
+  peak_strategy_map:
+    none: {precool_depth: 0.0, shed_depth: 0.0}
+    light: {precool_depth: 1.0, shed_depth: 1.0}
+    deep: {precool_depth: 2.0, shed_depth: 2.0}
+  setback_map:
+    deep: {setback_heat: 15.5, setback_cool: 30.0}
+    standard: {setback_heat: 17.5, setback_cool: 28.5}
+    shallow: {setback_heat: 19.0, setback_cool: 27.0}
+
+agent:
+  safe_default: {heat: 21.0, cool: 24.0}
+  verifier: true
+
+llm:
+  backend: offline                # offline | anthropic | openai_compatible | chaos
+  anthropic_model: claude-sonnet-5-5
+  openai_base_url: https://api.openai.com/v1
+  openai_model: gpt-4o-mini
+  max_tokens: 1000
+  temperature: 0.0
+  chaos_fault_rate: 0.15
+
+baselines:
+  fixed: {heat: 21.0, cool: 24.0}
+  scheduled: {start_hour: 6, end_hour: 19, heat: 21.0, cool: 24.0, setback_heat: 15.5, setback_cool: 30.0}
+  scheduled_tou: {precool_hours: 2, precool_cool: 23.0, peak_cool: 25.5, critical_cool: 26.0}

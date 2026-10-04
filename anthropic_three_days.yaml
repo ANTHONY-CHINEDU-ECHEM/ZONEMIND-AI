@@ -1,0 +1,9 @@
+# Three July days in Chicago with Claude as the reasoner (72 model calls).
+# Usage: export ANTHROPIC_API_KEY, export ZONEMIND_CONFIG to this file, then run `zonemind run`.
+llm:
+  backend: anthropic
+run:
+  climate: chicago
+  start_day: 195
+  days: 3
+  audit: results/audit_anthropic.jsonl

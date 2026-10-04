@@ -1,0 +1,5 @@
+# Tariff variant with a single demand charge that applies at any hour.
+# Under this structure load shifting into the hours before the peak window is no longer rewarded.
+tariff:
+  demand_anytime_per_kw: 12.0
+  demand_peak_per_kw: 0.0

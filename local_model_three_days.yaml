@@ -1,0 +1,11 @@
+# Three July days in Chicago with a local model served through an OpenAI compatible endpoint
+# (for example Ollama). Change the URL and model name to match your server.
+llm:
+  backend: openai_compatible
+  openai_base_url: http://localhost:11434/v1
+  openai_model: llama3.1
+run:
+  climate: chicago
+  start_day: 195
+  days: 3
+  audit: results/audit_local.jsonl
