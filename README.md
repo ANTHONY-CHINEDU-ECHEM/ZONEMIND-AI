@@ -2,7 +2,8 @@
 
 **Retrieval Grounded Adaptive Setpoint Control for Multi Zone Smart Buildings, with Episodic Memory and Constraint Verified Reasoning**
 
-![ZoneMind AI decision loop](docs/figures/architecture.png)
+<img width="1438" height="748" alt="architecture" src="https://github.com/user-attachments/assets/b8cef896-2159-472b-a4d9-350449a76924" />
+
 
 ## Project brief
 
@@ -29,7 +30,8 @@ Four buildings, one per climate, one evaluation year each. Every controller sees
 
 Against the timetable that most buildings run today, ZoneMind AI cut the total electricity bill by 7.1 percent, the HVAC energy cost by 18.6 percent, and occupied comfort violations by 89 percent. Against a timetable that an energy manager has already tuned by hand for the tariff, the bill fell by 4.3 percent and HVAC energy cost by 9.2 percent, again with 89 percent fewer comfort violations. The total bill includes lighting and equipment, which no HVAC controller can influence and which make up roughly two thirds of consumption in this building, so the HVAC energy cost column is the fairer measure of what the controller itself achieved.
 
-![Benchmark across four climates](docs/figures/benchmark.png)
+<img width="1839" height="635" alt="benchmark" src="https://github.com/user-attachments/assets/f2c91fc6-c154-4cf3-a4fd-608775453f4e" />
+
 
 Three further results matter as much as the savings:
 
@@ -54,7 +56,8 @@ Documents are the single source of truth. Each is a Markdown file whose prose is
 
 Thursday 17 July reaches 34 C and the supplier has called a critical peak event from 15:00 to 19:00, when energy costs 0.85 per kilowatt hour against 0.11 overnight.
 
-![Critical peak event day in Tampa](docs/figures/event_day_tampa.png)
+<img width="1274" height="1001" alt="event_day_tampa" src="https://github.com/user-attachments/assets/c811bc8a-c527-40d5-b7f3-176dd0fe8db3" />
+
 
 The timetable holds 24 C all day and carries about 25 kW through the event. ZoneMind AI cools the west zone slightly ahead of the afternoon sun, brings the building down to about 22.5 C in the three hours before the event while energy is at the mid rate, then floats to the 26 C comfort limit when the event begins. Its demand inside the event falls to roughly 15 kW. The cost is a higher load between noon and 15:00, which is visible in the lower panel and is exactly the trade the tariff rewards.
 
@@ -116,7 +119,8 @@ Comfort violations are measured as degree hours outside the 20 C to 26 C envelop
 
 ### 2. Where the saving comes from
 
-![Monthly bill components in Chicago](docs/figures/monthly_chicago.png)
+<img width="1718" height="615" alt="monthly_chicago" src="https://github.com/user-attachments/assets/567c6d15-96d6-45c8-ac8a-7f06d06afe1f" />
+
 
 In Chicago the agent uses almost exactly as many HVAC kilowatt hours as the timetable (27,232 against 27,265) yet spends 15.3 percent less on HVAC energy and cuts on peak demand by 26.5 percent. The saving is not from using less; it is from using it at better times and in fewer rooms, then spending part of the gain on proper recovery before people arrive. Across the portfolio HVAC consumption falls by a modest 3.3 percent while HVAC energy cost falls by 18.6 percent. Anyone evaluating a controller of this kind on kilowatt hours alone would conclude it does very little, and would be wrong.
 
@@ -124,7 +128,8 @@ The fixed setpoint baseline is a useful warning. Never setting back uses 24 perc
 
 ### 3. Retrieval: decomposition matters more than the ranker
 
-![Retrieval recall](docs/figures/retrieval.png)
+<img width="1291" height="534" alt="retrieval" src="https://github.com/user-attachments/assets/9ab1c6f1-9e02-46c6-9cd3-8121b56fbf1d" />
+
 
 Ground truth for retrieval needs no hand labelling. A document is relevant to a decision exactly when one of its directives applies to the situation, so every one of the 35,040 decisions is a labelled test case.
 
@@ -146,7 +151,8 @@ Because the reasoner can only act on what it was shown, retrieval misses appear 
 
 Nine points of recall cost 1.6 percent on the bill and more than triple the verifier's workload, as it catches limits that the missing documents would have told the reasoner about. With retrieval removed entirely the agent holds safe default setpoints at all times, which reproduces the fixed setpoint baseline and raises the bill by 7.4 percent. Comfort does not suffer in any of these cases, because the fail safe is comfort first.
 
-![Ablations](docs/figures/ablations.png)
+<img width="1871" height="550" alt="ablations" src="https://github.com/user-attachments/assets/8263f0c7-cd8f-4631-976e-5884bf750541" />
+
 
 ### 4. Verification under fault injection
 
@@ -158,7 +164,8 @@ Language models occasionally return truncated JSON, cite documents that do not e
 | Faults injected, verifier on | 150 | 138 | 0 | 85.2 | 13,676 |
 | Faults injected, verifier off | 150 | 138 | 3,871 | 273.2 | 13,842 |
 
-![Fault injection](docs/figures/robustness.png)
+<img width="1862" height="592" alt="robustness" src="https://github.com/user-attachments/assets/c2df93e0-15e2-4313-a527-841ecae8be54" />
+
 
 With the verifier in the loop no command that breaks a hard limit reaches the plant, all 150 malformed outputs are replaced by the deterministic fallback, and all 138 invented citations are flagged. Comfort violations still rise from 21.9 to 85.2 K·h. The verifier guarantees that every command is permitted; it cannot make a bad command good. A corrupted proposal that deepens a set back during morning recovery is inside every limit, and the zone is cold when people arrive. This is the honest boundary of rule based verification, and it is why the fallback reasoner and grounding checks exist alongside it.
 
@@ -177,7 +184,8 @@ The agent tunes three daily strategy knobs from memory: recovery lead time, peak
 
 Each cell is annual bill / comfort violations in K·h. On average the commissioned memory raised the bill by 0.3 percent and lowered comfort violations from 14.2 to 13.7 K·h. That is no effect.
 
-![Knob sensitivity and tuner choices](docs/figures/memory.png)
+<img width="1945" height="967" alt="memory" src="https://github.com/user-attachments/assets/0a92233e-9042-4395-9fe1-c0a55e26539f" />
+
 
 The sensitivity study explains why. Holding each knob at each value for an entire year shows that the best alternative to the defaults improves the daily score by less than one percent in every climate (the largest gain is 0.87 percent, from a three hour lead in Chicago), while the worst choice costs up to 3.3 percent. A one percent effect is a few tenths of a currency unit per day, against day to day variation from weather and attendance that is many times larger. One year of daily episodes cannot resolve that reliably. An earlier version of the tuner that always acted on its best estimate made the bill between one and two percent worse in the two climates tested; the shipped version leaves a default only when the estimated gain exceeds one standard error, which removes the harm but leaves little to gain.
 
